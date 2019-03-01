@@ -15,8 +15,6 @@ class MemberBox extends React.Component {
   }
 }
 
-
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyCDvmvGHrQ9FxSzjjBQgMmiwlhYybedXOg",
