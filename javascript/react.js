@@ -50,7 +50,7 @@ class Jumbotron extends React.Component {
 			div({className: 'img-jumbotron'},
 				div({className: 'bg-dark darkened'},
 					img({className: 'img-fluid', src:"images/Header.JPEG"})),
-				div({className: 'img-caption text-dark'},e('h1',{},'{{title}}'))))
+				div({className: 'img-overlay text-dark'},e('h1',{},'{{title}}'))))
 	}
 }
 
@@ -62,7 +62,7 @@ class MemberBox extends React.Component {
   render() {
     return div({className: 'card member-box', height:'18rem',  onMouseEnter: () => this.setState({display:false}), onMouseLeave: () => this.setState({display:true})},
       img({className: 'card-img-top' + ((!this.state.display) ? ' darkened':''), src:'images/members/'+this.props.val.img_url+'.png'}),
-      div({className: 'img-caption w-100 text-dark', hidden: this.state.display},
+      div({className: 'img-overlay w-100 text-dark', hidden: this.state.display},
         e('h2', {}, this.props.val.first + ' '+ this.props.val.last),
         e('p', {}, 'Home Mountain: '+this.props.val.home_mtn),
         e('p', {}, 'Run of Choice: '+this.props.val.fav_run),

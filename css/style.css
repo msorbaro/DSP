@@ -11,9 +11,29 @@
 	opacity:.5;
 }
 
-.img-caption{
+ion-icon {
+  font-size: 64px;
+}
+
+a ion-icon{
+	color:black;
+}
+
+a ion-icon:hover{
+	color:rgb(150,150,150);
+}
+
+.icon-sm {
+	font-size:32px;
+}
+
+.img-overlay{
 	position: absolute;
 	top:50%;
 	left:50%;
-	transform: translate(-50%, -10%);
+	transform: translate(-50%, -50%);
+}
+
+.semi-trans{
+	background:rgba(220,220,220,.9);
 }
