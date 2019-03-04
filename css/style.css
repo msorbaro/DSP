@@ -37,3 +37,29 @@ a ion-icon:hover{
 .semi-trans{
 	background:rgba(220,220,220,.9);
 }
+
+.bg-dart-green{
+	background-color: #00693E!important;
+}
+
+.border-dart-green {
+	border-color: #00693E!important;
+}
+
+.text-dart-green {
+	color: #00693E!important;;
+}
+
+.term-title {
+	text-decoration: underline;
+}
+
+.term-title:hover {
+	color:#00693E;
+	cursor:pointer;
+}
+
+.term-title.ng-show {
+  opacity:1;
+  /* transform: scale(0.8); */
+}

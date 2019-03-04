@@ -1,4 +1,5 @@
-var app = angular.module("myApp", ["ngRoute"])
+var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
+
 .config(function($routeProvider) {
 	$routeProvider.when('/how_to_join', {
 		templateUrl: 'how_to_join.html',
@@ -20,6 +21,13 @@ var app = angular.module("myApp", ["ngRoute"])
 .controller('myCtrl', function($scope) {
 })
 .controller('how_to_join', function($scope) {
+	$scope.changeTerm = function($event) {
+		if ($event.target.innerHTML === $scope.term) {
+			$scope.term = null
+		} else {
+			$scope.term = $event.target.innerHTML
+		}
+	}
 })
 .controller('for_members', function($scope) {
 })
