@@ -57,17 +57,36 @@ class Jumbotron extends React.Component {
 class MemberBox extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {display:true}
+    this.state = {display:true, small:false}
+  }
+  hover(b) {
+  	if ($(window).width() < 1200) {
+  		this.setState({
+  			display: b,
+  			small: true
+  		})
+  	} else {
+  		this.setState({
+  			display: b,
+  			small: false
+  		})
+  	}
   }
   render() {
-    return div({className: 'card member-box', height:'18rem',  onMouseEnter: () => this.setState({display:false}), onMouseLeave: () => this.setState({display:true})},
-      img({className: 'card-img-top' + ((!this.state.display) ? ' darkened':''), src:'images/members/'+this.props.val.img_url+'.png'}),
-      div({className: 'img-overlay w-100 text-dark', hidden: this.state.display},
+  	if (this.props.val.img_url == undefined){
+    	this.props.val.img_url = 'avatar'
+    }
+    return div({className: 'card member-box', height:'18rem',  onMouseEnter: () => this.hover(false), onMouseLeave: () => this.hover(true)},
+      img({className: 'card-img-top ' + ((!this.state.display || this.state.small) ? 'darkened':''), src:'images/members/'+this.props.val.img_url+'.png'}),
+      div({className: 'img-overlay font-weight-light w-100 text-dark  d-' + (((!this.state.display) || this.state.small) ? '':'xl-none') + ''},
         e('h2', {}, this.props.val.first + ' '+ this.props.val.last),
-        e('p', {}, 'Home Mountain: '+this.props.val.home_mtn),
-        e('p', {}, 'Run of Choice: '+this.props.val.fav_run),
-        e('p',{}, 'Year: '+this.props.val.grad_year),
-        e('p',{}, this.props.val.superlative)))
+        e('span', {className: 'd-none d-md-block'},
+        	e('p', {}, 'Home Mountain: '+this.props.val.home_mtn),
+	        e('p', {}, 'Run of Choice: '+this.props.val.fav_run),
+	        e('p',{}, 'Year: '+this.props.val.grad_year),
+	        e('p',{}, this.props.val.superlative)
+        )))
+        
   }
 }
 const nav_container = document.querySelector('#nav_container');

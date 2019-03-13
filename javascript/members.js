@@ -2,8 +2,12 @@ class MemberBox extends React.Component {
   constructor(props) {
     super(props)
     this.state = {display:true}
+    if (this.props.val.img_url == undefined){
+      this.props.val.img_url = "avatar"
+    }
   }
   render() {
+    console.log(this.props)
     return div({className: 'card member-box', height:'18rem',  onMouseEnter: () => this.setState({display:false}), onMouseLeave: () => this.setState({display:true})},
       img({className: 'card-img-top' + ((!this.state.display) ? ' darkened':''), src:'images/members/'+this.props.val.img_url+'.png'}),
       div({className: 'img-caption w-100 text-dark', hidden: this.state.display},

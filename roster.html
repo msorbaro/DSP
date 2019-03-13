@@ -9,8 +9,18 @@
           <div class="col-6"><hr></div>
         </div>
 
+        <div class="row justify-content-center">
+          <div class="col-10" id="apprenti_block">
+            <nav class="nav nav-pills nav-fill mb-5">
+              <a class="nav-item nav-link" ng-class="(selectedType == 'new_members') ? 'active' : ''" href="" ng-click="changeSelection('new_members')">New Members</a>
+              <a class="nav-item nav-link" ng-class="(selectedType == 'candidates') ? 'active' : ''" href="" ng-click="changeSelection('candidates')">Candidates</a>
+              <a class="nav-item nav-link" ng-class="(selectedType == 'patrolers') ? 'active' : ''" href="" ng-click="changeSelection('patrolers')">Patrolers</a>
+              <a class="nav-item nav-link" ng-class="(selectedType == 'board') ? 'active' : ''" href="" ng-click="changeSelection('board')">Board</a>
+            </nav>
+          </div>
+        </div>
         <div class="row">
-          <div class="col-12 h-100" id="apprenti_block">
+          <div class="col-12">
             <div class='card-columns' id='apprenti-deck'></div>
           </div>
         </div>

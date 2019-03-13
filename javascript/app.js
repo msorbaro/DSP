@@ -32,7 +32,7 @@ var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
 .controller('for_members', function($scope) {
 })
 .controller('members', function($scope) {
-
+	$scope.selectedType = 'new_members'
 	// Initialize Firebase
 	var config = {
 	  apiKey: "AIzaSyCDvmvGHrQ9FxSzjjBQgMmiwlhYybedXOg",
@@ -44,22 +44,53 @@ var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
 	};
 
 	if (!firebase.apps.length) {
-    	firebase.initializeApp(config);
+		firebase.initializeApp(config);
 	}
 
 	var ref = firebase.database().ref();
 
-	var apprenti_items = []
-
 	ref.on("value", function(snapshot) {
-	   $.each(snapshot.val()[0].members, function(index, val) {
-	    if (val != undefined){
-	        apprenti_items.push(e(MemberBox,{'val': val}))
-	      }
-	    });
-	  const apprenti_block_container = document.querySelector('#apprenti-deck');
-	  ReactDOM.render(e('span',null,apprenti_items), apprenti_block_container);
+		var first_year_data = []
+		var patrol_data = []
+		var candidate_data = []
+		var board_data = []
+		$.each(snapshot.val()[0].members, function(index, val) {
+			if (val != undefined){
+				if (val.assoc == 'A') {
+					first_year_data.push(e(MemberBox,{'val': val}))
+				} else if (val.assoc == 'C'){
+					candidate_data.push(e(MemberBox,{'val': val}))
+				} else if (val.assoc == 'P') {
+					patrol_data.push(e(MemberBox,{'val': val}))
+				} else if(val.assoc == 'B') {
+					board_data.push(e(MemberBox,{'val': val}))
+				}
+		  	}
+		});
+		$scope.Pdata = {
+			'new_members' : first_year_data,
+			'patrolers' : patrol_data,
+			'candidates' : candidate_data,
+			'board' : board_data
+			}
+		$scope.changeSelection($scope.selectedType)
+	  // if ($scope.selectedType == 'board') {
+	  // 	ReactDOM.render(e('span',null,board_data), apprenti_block_container);
+	  // } else if ($scope.selectedType == 'new_members') {
+	  // 	ReactDOM.render(e('span',null,first_year_data), apprenti_block_container);
+	  // }
+		// case 'candidate':
+		// 	ReactDOM.render(e('span',null,candidate_data), apprenti_block_container);
+		// 	break
+		// case 'patrolers':
+		// 	ReactDOM.render(e('span',null,patrol_data), apprenti_block_container);
+		// 	break;
 	}, function (error) {
 	   console.log("Error: " + error.code);
 	});
+	$scope.changeSelection = function(sel) {
+		$scope.selectedType = sel
+		const apprenti_block_container = document.querySelector('#apprenti-deck');
+		ReactDOM.render(e('span',null,$scope.Pdata[$scope.selectedType]), apprenti_block_container);
+	}
 })

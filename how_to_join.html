@@ -4,24 +4,29 @@
 	    <p> The process to become a patroller with the Dartmouth Ski Patrol (DSP) is competitive and challenging. We select those applicants who are most likely to succeed both as patrollers and as contributors to the team. You don't need to be the best skier on the mountain. You don't need to have the longest resume. A strong desire to succeed, grace under pressure, communication and teamwork skills, and/or the ability to work with your hands are all equally important. If you can see yourself as a patroller, you should apply - we will train you! </p>
 	  </div>
 	</div>
-	<span class="d-none d-xl-block">
+	<span class="d-lg-block">
 		<hr>
-		<div class="row justify-content-center m-5">
-				<div class="col-6 d-flex flex-column justify-content-around border-right-0 border border-dart-green rounded-left">
-					<h2>What We Do</h2>
-					<p>Dartmouth Ski Patrol members respond to real emergencies.</p>
-					<p>Members are personally responsible for rescue of persons with potentially life-altering injuries.</p>
-					<p>Ski Patrol work involves inherent risk greater than that experienced by a recreational skier.</p>
-				</div>
-				<div class="col-4 justify-content-center mx-0 p-0">
-					<img src="images/IMG_2721.png" class="img-fluid border border-dart-green border-left-0 rounded-right mx-auto d-block">
-				</div>
+		<div class="row justify-content-around p-0 m-5">
+			<div class="col-md-6 col-12 d-flex flex-column justify-content-around">
+				<h2>What We Do</h2>
+				<p>Dartmouth Ski Patrol members respond to real emergencies.</p>
+				<p>Members are personally responsible for rescue of persons with potentially life-altering injuries.</p>
+				<p>Ski Patrol work involves inherent risk greater than that experienced by a recreational skier.</p>
 			</div>
-		<div class="row justify-content-center m-5">
-			<div class="col-4 justify-content-center mx-0 p-0">
-				<img src="images/IMG_5106.png" class="img-fluid border border-right-0 border-dart-green rounded-left mx-auto d-block">
+			<div class="col-md-4 col-6 d-flex flex-column align-items-center justify-content-center mx-0 p-0">
+				<img src="images/IMG_2721.png" class="img-fluid mx-auto d-block rounded-circle">
 			</div>
-			<div class="col-6 d-flex flex-column justify-content-around border border-left-0 border-dart-green rounded-right">
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<hr>
+			</div>
+		</div>
+		<div class="row justify-content-around flex-wrap m-5">
+			<div class="col-md-4 col-6 order-2 order-md-1 d-flex flex-column align-items-center justify-content-center mx-0 p-0">
+				<img src="images/IMG_5106.png" class="img-fluid rounded-circle">
+			</div>
+			<div class="col-md-6 col-12 order-1 order-md-2 d-flex flex-column justify-content-around text-right">
 				<h2>What we Expect</h2>
 				<p>Members must rapidly develop and maintain a high level of proficiency.</p>	
 				<p>Patrol membership entails a commitment similar to a varsity sport.</p>
@@ -30,79 +35,96 @@
 			</div>
 		</div>
 	</span>
-	<span class="">
+	<span>
 		<hr>
-		<div class="row text-center my-5 mh-100">
-			<div class="jumbotron jumbotron-fluid p-0 my-0">
+		<div class="row text-center my-5 d-flex align-items-center justify-content-center">
+			<div class="col-xl-3 col-sm-12" ng-show="(term != 'Winter Term') && (term != 'Sophmore Winter')">
+				<div class="card semi-trans">
+					<div class="card-body">
+						<h2 class="card-title term-title"  ng-click="changeTerm($event)">Fall Term</h2>
+						<p class="card-text">
+							<p>Attendence at Inforamation Session</p>
+							<p>Online Application</p>
+							<p>Formal Interview and Initial Testing</p>
+							<p>First Round Selections</p>
+							<p>Outdoor Emergency Care Classes</p>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-1" ng-show="!term">
+				<div class="d-none d-xl-flex align-items-center" ><ion-icon name="arrow-round-forward" class="text-dart-green"></ion-icon></div>
+				<div class="d-xl-none d-flex align-items-center"><ion-icon name="arrow-round-down" class="text-dart-green"></ion-icon></div>
+			</div>
+			<div class="col-xl-3 col-sm-12" ng-show="(term != 'Fall Term') && (term != 'Sophmore Winter')">
+				<div class="card semi-trans">
+					<div class="card-body">
+						<h2 class="card-title term-title" ng-click="changeTerm($event)">Winter Term</h2>
+						<p class="card-text">
+							<p>Ski and Ride Skills Evaluation</p>
+							<p>Practical Skills Evaluation</p>
+							<p>Second Round Selections (15 chosen)</p>
+							<p>Winter Term Shift Training</p>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-1" ng-show="!term">
+				<div class="d-none d-xl-flex align-items-center"><ion-icon name="arrow-round-forward" class="text-dart-green"></ion-icon></div>
+				<div class="d-xl-none d-flex align-items-center"><ion-icon name="arrow-round-down" class="text-dart-green"></ion-icon></div>
+			</div>
+			<div class="col-xl-3 col-sm-12" ng-show="(term != 'Fall Term') && (term !='Winter Term')">
+				<div class="card semi-trans">
+					<div class="card-body">
+						<h2 class="card-title term-title" ng-click="changeTerm($event)">Sophmore Winter</h2>
+						<p class="card-text">
+							<p>Sophmore Winter Cadidate Training</p>
+							<p>Sophmore Winter "Vest" Test</p>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-xl-7 my-5" ng-show="term == 'Fall Term'">
+				<div class="card semi-trans">
+					<div class="card-body">
+						<h2 class="card-title">Fall Term Extra Data</h2>
+						<p class="card-text">
+							<p>Interviews will include review of application, life experience, ski/snowboard experience and interests, interaction skills, and more. Recommended attire is "business casual". The applicant may be photographed. The interview panel will include at least two interviewers, at least one of whom is an upperclass student. Brief initial testing to determine a baseline of technical and physical ability will be conducted.</p>
+							<p>An Outdoor Emergency Care certification class will be provided during the fall term to prepare the applicant. Class is held Tuesday and Thursday for 2 to 3 hours each class session with online preparation for each class.</p>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-xl-7 my-5" ng-show="term == 'Winter Term'">
+				<div class="card semi-trans">
+					<div class="card-body">
+						<h2 class="card-title">Winter Term Extra Data</h2>
+						<p class="card-text">
+							<p></p>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-xl-7 my-4" ng-show="term == 'Sophmore Winter'">
+				<div class="card semi-trans">
+					<div class="card-body">
+						<h2 class="card-title">Sophmore Summer Extra Data</h2>
+						<p class="card-text">
+							<p>Members who have successfully completed all phases of training and the OEC course will return several days before their sophomore winter term begins, in late December, for several days of intensive all-day on-mountain training. Members are now considered "Candidates" for the title of Ski Patroller. </p>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="jumbotron jumbotron-fluid p-0 my-0">
 				<div class="img-jumbotron">
 	  				<img src="images/header4.jpg" class="img-fluid">
-	  				<div class="img-overlay container w-100">
-	  					<div class="card-deck">
-							<div class="card semi-trans" ng-show="(term != 'Winter Term') && (term != 'Sophmore Winter')">
-								<div class="card-body">
-									<h2 class="card-title term-title"  ng-click="changeTerm($event)">Fall Term</h2>
-									<p class="card-text">
-										<p>Attendence at Inforamation Session</p>
-										<p>Online Application</p>
-										<p>Formal Interview and Initial Testing</p>
-										<p>First Round Selections</p>
-										<p>Outdoor Emergency Care Classes</p>
-									</p>
-								</div>
-							</div>
-							<div class="d-none d-xl-flex align-items-center" ng-show="!term"><ion-icon name="arrow-round-forward" class="text-dart-green"></ion-icon></div>
-							<div class="d-xl-none d-flex align-items-center" ng-show="!term"><ion-icon name="arrow-round-down" class="text-dart-green"></ion-icon></div>
-							<div class="card semi-trans" ng-show="(term != 'Fall Term') && (term != 'Sophmore Winter')">
-								<div class="card-body">
-									<h2 class="card-title term-title"  ng-click="changeTerm($event)">Winter Term</h2>
-									<p class="card-text">
-										<p>Ski and Ride Skills Evaluation</p>
-										<p>Practical Skills Evaluation</p>
-										<p>Second Round Selections (15 chosen)</p>
-										<p>Winter Term Shift Training</p>
-									</p>
-								</div>
-							</div>
-							<div class="d-none d-xl-flex align-items-center" ng-show="!term"><ion-icon name="arrow-round-forward" class="text-dart-green"></ion-icon></div>
-							<div class="d-xl-none d-flex align-items-center" ng-show="!term"><ion-icon name="arrow-round-down" class="text-dart-green"></ion-icon></div>
-							<div class="card semi-trans" ng-show="(term != 'Fall Term') && (term !='Winter Term')">
-								<div class="card-body">
-									<h2 class="card-title term-title" ng-click="changeTerm($event)">Sophmore Winter</h2>
-									<p class="card-text">
-										<p>Sophmore Winter Cadidate Training</p>
-										<p>Sophmore Winter "Vest" Test</p>
-									</p>
-								</div>
-							</div>
-							<div class="card semi-trans" ng-show="term == 'Fall Term'">
-								<div class="card-body">
-									<h2 class="card-title">Fall Term Extra Data</h2>
-									<p class="card-text">
-										<p>Interviews will include review of application, life experience, ski/snowboard experience and interests, interaction skills, and more. Recommended attire is "business casual". The applicant may be photographed. The interview panel will include at least two interviewers, at least one of whom is an upperclass student. Brief initial testing to determine a baseline of technical and physical ability will be conducted.</p>
-										<p>An Outdoor Emergency Care certification class will be provided during the fall term to prepare the applicant. Class is held Tuesday and Thursday for 2 to 3 hours each class session with online preparation for each class.</p>
-									</p>
-								</div>
-							</div>
-							<div class="card semi-trans" ng-show="term == 'Winter Term'">
-								<div class="card-body">
-									<h2 class="card-title">Winter Term Extra Data</h2>
-									<p class="card-text">
-										<p>
-									</p>
-								</div>
-							</div>
-							<div class="card semi-trans" ng-show="term == 'Sophmore Winter'">
-								<div class="card-body">
-									<h2 class="card-title">Sophmore Summer Extra Data</h2>
-									<p class="card-text">
-										<p>Members who have successfully completed all phases of training and the OEC course will return several days before their sophomore winter term begins, in late December, for several days of intensive all-day on-mountain training. Members are now considered "Candidates" for the title of Ski Patroller. </p>
-									</p>
-								</div>
-							</div>
+	  				<div class="img-overlay container-fluid w-100">
+	  					<div class="row justify-content-center">
+	  						
 						</div>
 	  				</div>
 	  			</div>
-	  		</div>
+	  		</div> -->
 		</div>
 	</span>
 	<span>
