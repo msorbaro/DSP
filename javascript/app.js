@@ -10,6 +10,9 @@ var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
 	}).when('/for_members', {
 		templateUrl: 'for_members.html',
 		controller: 'for_members'
+	}).when('/', {
+		templateUrl: 'home.html',
+		controller: 'home'
 	})
 })
 .run(function($rootScope){

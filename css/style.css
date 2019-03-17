@@ -2,23 +2,22 @@ html {
   font-size: 1rem;
 }
 
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
+ion-icon {
+  font-size: 64px;
 }
 
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
+a ion-icon{
+	color:black;
 }
 
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
-  }
+a ion-icon:hover{
+	color:rgb(150,150,150);
 }
+
+a {
+	color:red;
+}
+
 
 .card-columns {
 	column-count: 3;
@@ -31,18 +30,6 @@ html {
 
 .darkened{
 	opacity:.5;
-}
-
-ion-icon {
-  font-size: 64px;
-}
-
-a ion-icon{
-	color:black;
-}
-
-a ion-icon:hover{
-	color:rgb(150,150,150);
 }
 
 .icon-sm {
@@ -72,6 +59,9 @@ a ion-icon:hover{
 .text-dart-green {
 	color: #00693E!important;
 }
+.outl-black {
+	text-shadow: 0px 0px 1px black;
+}
 
 .term-title {
 	text-decoration: underline;
@@ -85,4 +75,8 @@ a ion-icon:hover{
 .term-title.ng-show {
   opacity:1;
   /* transform: scale(0.8); */
+}
+
+.overflow-scroll {
+	overflow: scroll;
 }
