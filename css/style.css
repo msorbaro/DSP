@@ -48,19 +48,29 @@ a {
 	background:rgba(220,220,220,.9);
 }
 
+/*Dartmouth Green*/
 .bg-dart-green{
-	background-color: #00693E!important;
+	background-color: #00693E;
 }
-
 .border-dart-green {
-	border-color: #00693E!important;
+	border-color: #00693E;
 }
-
 .text-dart-green {
-	color: #00693E!important;
+	color: #00693E;
 }
 .outl-black {
 	text-shadow: 0px 0px 1px black;
+}
+
+/*Light Green*/
+.bg-light-dart-green{
+	background-color: #7A9F85;
+}
+.border-light-dart-green {
+	border-color: #7A9F85;
+}
+.text-light-dart-green {
+	color: #7A9F85;
 }
 
 .term-title {
@@ -79,4 +89,15 @@ a {
 
 .overflow-scroll {
 	overflow: scroll;
+}
+
+
+/*Icon Div*/
+.icon-div {
+	border-radius: 100%;
+	border:5px solid #00693E!important;
+	margin:2rem;
+	font-size: 8rem;
+	padding:2rem;
+	color:#7A9F85!important;
 }
