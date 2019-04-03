@@ -27,7 +27,7 @@ class NavBar extends React.Component {
 					li({className: 'nav-item active'},
 						a({className: 'nav-link', href:'index.html', value:"Dartmouth Ski Patrol"},'Home')),
 					li({className: 'nav-item'},
-						a({className: 'nav-link', href:'#', value:"About DSP"},'About DSP')),
+						a({className: 'nav-link', href:'#!about_dsp', value:"About DSP"},'About DSP')),
 					li({className: 'nav-item dropdown'},
 						a({className: 'nav-link dropdown-toggle', id:'navbarDropdown', role:'button', 'data-toggle':'dropdown', 'aria-haspopup':'true', 'aria-expanded':'false'},'Members'),
 						div({className: 'dropdown-menu', 'aria-labelledby':'navbarDropdown'},
@@ -86,7 +86,7 @@ class MemberBox extends React.Component {
 	        e('p',{}, 'Year: '+this.props.val.grad_year),
 	        e('p',{}, this.props.val.superlative)
         )))
-        
+
   }
 }
 const nav_container = document.querySelector('#nav_container');

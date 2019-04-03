@@ -13,6 +13,9 @@ var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
 	}).when('/', {
 		templateUrl: 'home.html',
 		controller: 'home'
+	}).when('/about_dsp', {
+		templateUrl: 'about_dsp.html',
+		controller: 'aboutDSP'
 	})
 })
 .run(function($rootScope){

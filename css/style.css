@@ -101,3 +101,92 @@ a {
 	padding:2rem;
 	color:#7A9F85!important;
 }
+
+.box {
+  background-color: #F6F0F0;
+  border-style: solid;
+  border-width: medium;
+  border-color: #7A9F85;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  margin-bottom: 3vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-bottom: 3vh;
+}
+
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.box h1 {
+  color: #7A9F85;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.mission h3, .staffing h3 {
+  color: #7A9F85;
+}
+
+.historyBox {
+  background-color: #7A9F8580;
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+.historyBox h3, .serviceBox h3 {
+  font-size: 1.3em;
+  color: #FFFFFF;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.serviceBox {
+  background-color: #7A9F8580;
+  width: 300px;
+  height: 150px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.missionPart, .staffText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historyContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.historySection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60vw;
+}
+
+.staffing p {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 2vh;
+}
