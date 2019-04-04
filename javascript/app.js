@@ -26,6 +26,11 @@ var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
 })
 .controller('myCtrl', function($scope) {
 })
+.controller("aboutDSP", function($scope) {
+	$scope.myFunction = function() {
+		console.log("hi")
+	}
+})
 .controller('how_to_join', function($scope) {
 	$scope.changeTerm = function($event) {
 		if ($event.target.innerHTML === $scope.term) {
