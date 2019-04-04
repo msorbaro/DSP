@@ -21,6 +21,9 @@ var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
 		$rootScope.title = $(this).attr('value')
 	});
 })
+.controller('home', function($scope) {
+	$scope.img_urls = ['IMG_0240', 'IMG_0246', 'IMG_2721', 'IMG_2796', 'IMG_5106', 'IMG_9024']
+})
 .controller('myCtrl', function($scope) {
 })
 .controller('how_to_join', function($scope) {

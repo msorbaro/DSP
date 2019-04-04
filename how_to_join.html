@@ -7,8 +7,8 @@
 	<span class="d-lg-block">
 		<hr>
 		<div class="row justify-content-around p-0 m-5">
-			<div class="col-md-6 col-12 d-flex flex-column justify-content-around">
-				<h2>What We Do</h2>
+			<div class="col-md-6 col-12 d-flex flex-column justify-content-around h5">
+				<p class="display-4">What We Do</p>
 				<p>Dartmouth Ski Patrol members respond to real emergencies.</p>
 				<p>Members are personally responsible for rescue of persons with potentially life-altering injuries.</p>
 				<p>Ski Patrol work involves inherent risk greater than that experienced by a recreational skier.</p>
@@ -26,8 +26,8 @@
 			<div class="col-md-4 col-6 order-2 order-md-1 d-flex flex-column align-items-center justify-content-center mx-0 p-0">
 				<img src="images/IMG_5106.png" class="img-fluid rounded-circle">
 			</div>
-			<div class="col-md-6 col-12 order-1 order-md-2 d-flex flex-column justify-content-around text-right">
-				<h2>What we Expect</h2>
+			<div class="col-md-6 col-12 order-1 order-md-2 d-flex flex-column justify-content-around text-right h5">
+				<p class="display-4">What we Expect</p>
 				<p>Members must rapidly develop and maintain a high level of proficiency.</p>	
 				<p>Patrol membership entails a commitment similar to a varsity sport.</p>
 				<p>A new member will spend hundreds of hours in challenging training.</p>
@@ -35,14 +35,14 @@
 			</div>
 		</div>
 	</span>
-	<span>
+	<span class="d-none d-lg-block">
 		<hr>
 		<div class="row text-center my-5 d-flex align-items-center justify-content-center">
-			<div class="col-xl-3 col-sm-12" ng-show="(term != 'Winter Term') && (term != 'Sophmore Winter')">
-				<div class="card semi-trans">
+			<div class="col-xl-3 col-sm-12 d-flex flex-row align-self-stretch justify-content-center" ng-show="(term != 'Winter Term') && (term != 'Sophmore Winter')">
+				<div class="card semi-trans d-flex flex-row align-items-center">
 					<div class="card-body">
 						<h2 class="card-title term-title"  ng-click="changeTerm($event)">Fall Term</h2>
-						<p class="card-text">
+						<p class="card-text justify-content-center">
 							<p>Attendence at Inforamation Session</p>
 							<p>Online Application</p>
 							<p>Formal Interview and Initial Testing</p>
@@ -56,16 +56,16 @@
 				<div class="d-none d-xl-flex align-items-center" ><ion-icon name="arrow-round-forward" class="text-dart-green"></ion-icon></div>
 				<div class="d-xl-none d-flex align-items-center"><ion-icon name="arrow-round-down" class="text-dart-green"></ion-icon></div>
 			</div>
-			<div class="col-xl-3 col-sm-12" ng-show="(term != 'Fall Term') && (term != 'Sophmore Winter')">
-				<div class="card semi-trans">
+			<div class="col-xl-3 col-sm-12 d-flex flex-row align-self-stretch justify-content-center" ng-show="(term != 'Fall Term') && (term != 'Sophmore Winter')">
+				<div class="card semi-trans d-flex flex-row align-items-center">
 					<div class="card-body">
 						<h2 class="card-title term-title" ng-click="changeTerm($event)">Winter Term</h2>
-						<p class="card-text">
+						<span class="card-text">
 							<p>Ski and Ride Skills Evaluation</p>
 							<p>Practical Skills Evaluation</p>
 							<p>Second Round Selections (15 chosen)</p>
 							<p>Winter Term Shift Training</p>
-						</p>
+						</span>
 					</div>
 				</div>
 			</div>
@@ -73,8 +73,8 @@
 				<div class="d-none d-xl-flex align-items-center"><ion-icon name="arrow-round-forward" class="text-dart-green"></ion-icon></div>
 				<div class="d-xl-none d-flex align-items-center"><ion-icon name="arrow-round-down" class="text-dart-green"></ion-icon></div>
 			</div>
-			<div class="col-xl-3 col-sm-12" ng-show="(term != 'Fall Term') && (term !='Winter Term')">
-				<div class="card semi-trans">
+			<div class="col-xl-3 col-sm-12 d-flex flex-row align-self-stretch justify-content-center" ng-show="(term != 'Fall Term') && (term !='Winter Term')">
+				<div class="card semi-trans d-flex flex-row align-items-center">
 					<div class="card-body">
 						<h2 class="card-title term-title" ng-click="changeTerm($event)">Sophmore Winter</h2>
 						<p class="card-text">
@@ -84,8 +84,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-12 col-xl-7 my-5" ng-show="term == 'Fall Term'">
-				<div class="card semi-trans">
+			<div class="col-sm-12 col-lg-7 my-lg-3 my-xl-0 d-flex flex-row align-self-stretch justify-content-center" ng-show="term == 'Fall Term'">
+				<div class="card semi-trans d-flex flex-row align-items-center">
 					<div class="card-body">
 						<h2 class="card-title">Fall Term Extra Data</h2>
 						<p class="card-text">
@@ -95,20 +95,20 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-12 col-xl-7 my-5" ng-show="term == 'Winter Term'">
-				<div class="card semi-trans">
+			<div class="col-sm-12 col-lg-7 my-lg-3 my-xl-0 d-flex flex-row align-self-stretch justify-content-center" ng-show="term == 'Winter Term'">
+				<div class="card semi-trans d-flex flex-row align-items-center">
 					<div class="card-body">
 						<h2 class="card-title">Winter Term Extra Data</h2>
 						<p class="card-text">
-							<p></p>
+							<p><span class="font-weight-bold">Winter Term Shifts:</span> Applicants selected to continue as Patrol Apprentices after the test will be required to attend two shifts per week at the Skiway during the winter. This is 10 hours or more per week. They will be trained in toboggan handling and ski area operations. Apprentices may be asked to respond to emergency scenes to assist qualified patrollers. </p>
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-12 col-xl-7 my-4" ng-show="term == 'Sophmore Winter'">
-				<div class="card semi-trans">
+			<div class="col-sm-12 col-lg-7 my-lg-3 my-xl-0 d-flex flex-row align-self-stretch justify-content-center" ng-show="term == 'Sophmore Winter'">
+				<div class="card semi-trans d-flex flex-row align-items-center">
 					<div class="card-body">
-						<h2 class="card-title">Sophmore Summer Extra Data</h2>
+						<h2 class="card-title">Sohmore Winter Extra Data</h2>
 						<p class="card-text">
 							<p>Members who have successfully completed all phases of training and the OEC course will return several days before their sophomore winter term begins, in late December, for several days of intensive all-day on-mountain training. Members are now considered "Candidates" for the title of Ski Patroller. </p>
 						</p>

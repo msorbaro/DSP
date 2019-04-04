@@ -98,6 +98,10 @@ a {
 	border:5px solid #00693E!important;
 	margin:2rem;
 	font-size: 8rem;
-	padding:2rem;
+	padding:3rem;
 	color:#7A9F85!important;
+}
+
+.mh-30rem {
+	max-height: 30rem;
 }
