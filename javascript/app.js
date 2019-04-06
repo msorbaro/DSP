@@ -23,6 +23,10 @@ var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
 	$(".nav-link, .dropdown-item").click(function(event) {
 		$rootScope.title = $(this).attr('value')
 	});
+
+	$scope.myFunction = function() {
+		console.log("Hi")
+	}
 })
 .controller('myCtrl', function($scope) {
 })
