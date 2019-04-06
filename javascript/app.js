@@ -23,12 +23,14 @@ var app = angular.module("myApp", ["ngRoute", "ngAnimate"])
 	$(".nav-link, .dropdown-item").click(function(event) {
 		$rootScope.title = $(this).attr('value')
 	});
-
-	$scope.myFunction = function() {
-		console.log("Hi")
-	}
 })
 .controller('myCtrl', function($scope) {
+})
+.controller("aboutDSP", function($scope) {
+	$scope.myFunction = function() {
+		console.log("hi")
+		// I want to access a different element (example h3) and toggle its text  
+	}
 })
 .controller('how_to_join', function($scope) {
 	$scope.changeTerm = function($event) {
