@@ -49,7 +49,7 @@ class Jumbotron extends React.Component {
 			{className: 'jumbotron jumbotron-fluid p-0'},
 			div({className: 'img-jumbotron'},
 				div({className: 'bg-dark darkened'},
-					img({className: 'img-fluid', src:"images/Header.JPEG"})),
+					img({className: 'img-fluid', src:"images/header.png"})),
 				div({className: 'img-overlay text-dark'},e('h1',{},'{{title}}'))))
 	}
 }
